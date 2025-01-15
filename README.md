@@ -1,8 +1,27 @@
 # identifying_top_youtube_creators
 
-[Data Cleaning](#data-cleaning)
+* [Introduction](#introduction)
+	* [User Story](#user-story)
+	* [Solution](#solution)
+	* [Success Criteria (what success looks like to the user)](#success-criteria-what-success-looks-like-to-the-user)
+	* [Tools](#tools)
+	* [Steps](#steps)
+* [SQL](#sql)
+	* [Data Cleaning](#data-cleaning)
+	* [Data Exploration Notes](#data-exploration-notes)                                                                                             
+	* [Data Cleaning](#data-cleaning)                                                                                                                
+	* [Data Quality Check](#data-quality-check)
+* [Power BI](#power-bi)
+	* [Build a Dashboard with Power BI](nuild-a-dashboard-with-power-bi)
+	* [Final Look of the Dashboard](#final-look-of-the-dashboard)
+* [Analysis](#analysis)
+	* [Findings](#findings)
+	* [Calculating YouTube Sponsorship Rate](#calculating-youtube-sponsorship-rate)
+	* [Recommendation and Action Plan](#recommendation-and-action-plan)
 
-<br><br>
+<br>
+
+# Introduction
 
 Identify the top-performing YouTube content creators of 2023 and collaborate with them to keep New Zealand on the global travel radar. Our aim is to enhancing NZ’s tourism economy, to increase the opportunity to **benefit local businesses**, **boost support for sports teams**, **attract potential investors, influx of foreign money,** and **encourage more influential figures to visit.**
 
@@ -80,6 +99,8 @@ https://www.kaggle.com/datasets/nelgiriyewithana/global-youtube-statistics-2023?
 **Step 6. Recommendations and Action Plan**
 
 <br>
+
+# SQL
 
 ## Data Exploration Notes
 •	Data shape: 847 rows 28 cols
@@ -310,7 +331,7 @@ RETURN subscriberEngRate * 100
 
 <br>
 
-## Final version of the dashboard 
+## Final look of the dashboard 
 
 ![dashboard_1](https://github.com/user-attachments/assets/1f41a02e-2adb-4c56-b232-a7f776e1e458)
 
