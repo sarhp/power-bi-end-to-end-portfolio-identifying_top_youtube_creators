@@ -1,5 +1,5 @@
 /*
-Table of contents:
+Contents:
 1. DATA EXPLORATION
 2. DATA CLEANING 
 3. DATA QUALITY CHECK AFTER CLEANING 
