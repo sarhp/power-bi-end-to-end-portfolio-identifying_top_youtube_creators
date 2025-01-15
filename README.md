@@ -1,6 +1,6 @@
 # identifying_top_youtube_creators
 
-- [Recommendation and Action Plan](Recommendation-and-Action-Plan)
+[Data Cleaning](#data-cleaning)
 
 <br><br>
 
