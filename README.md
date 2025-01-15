@@ -1,5 +1,7 @@
 # identifying_top_youtube_creators
 
+- [Recommendation and Action Plan](Recommendation-and-Action-Plan)
+
 <br><br>
 
 Identify the top-performing YouTube content creators of 2023 and collaborate with them to keep New Zealand on the global travel radar. Our aim is to enhancing NZ’s tourism economy, to increase the opportunity to **benefit local businesses**, **boost support for sports teams**, **attract potential investors, influx of foreign money,** and **encourage more influential figures to visit.**
