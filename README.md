@@ -1,145 +1,56 @@
-# identifying_top_youtube_creators
 
-* [Introduction](#introduction)
+
+* [Objective](#objective)
+	* [About Dataset](#about-dataset)
+	* [Workflow](#workflow)
 	* [User Story](#user-story)
-	* [Solution](#solution)
-	* [Success Criteria (what success looks like to the user)](#success-criteria-what-success-looks-like-to-the-user)
-	* [Tools](#tools)
-	* [Steps](#steps)
+	* [Success Criteria](#success-criteria)
 * [SQL](#sql)
-	* [Data Cleaning](#data-cleaning)
 	* [Data Exploration Notes](#data-exploration-notes)                                                                              
 	* [Data Cleaning](#data-cleaning)                                                                                                
 	* [Data Quality Check](#data-quality-check)
 * [Power BI](#power-bi)
-	* [Build a Dashboard with Power BI](nuild-a-dashboard-with-power-bi)
-	* [Final Look of the Dashboard](#final-look-of-the-dashboard)
+	* [(Power BI) Build Dashboard](#(power-bi)-build-a-dashboard)
+	* [(Power BI) Dashboard](#dashboard)
+* [Excel & SQL](#excel-&-sql)
+	* [(Excel & SQL) Calculating YouTube Sponsorship Rate](#(excel-&-sql)-calculating-youtube-sponsorship-rate)
 * [Analysis](#analysis)
-	* [Findings](#findings)
-	* [Calculating YouTube Sponsorship Rate](#calculating-youtube-sponsorship-rate)
-	* [Recommendation and Action Plan](#recommendation-and-action-plan)
+  	* [Findings](#findings)
+  	* [Action Plan](#action-plan)
+  	  
 
 <br>
 
-# Introduction
+# Objective
+![objective](https://github.com/user-attachments/assets/aeb4daa8-88f2-4f22-9fd6-2a1717a9a5e9)
 
-Identify the top-performing YouTube content creators of 2023 and collaborate with them to keep New Zealand on the global travel radar. Our aim is to enhancing NZ’s tourism economy, to increase the opportunity to **benefit local businesses**, **boost support for sports teams**, **attract potential investors, influx of foreign money,** and **encourage more influential figures to visit.**
+<br>
+
+## About Dataset
+![about dataset](https://github.com/user-attachments/assets/d4a97c57-a1dd-4e74-a98b-bddc011a69cd)
+
+<br>
+
+## Workflow
+![workflow](https://github.com/user-attachments/assets/335c026b-585b-4d51-80dd-64d0d5ae357b)
 
 <br>
 
 ## User Story
-"As the head of marketing, I want to identify top content creators who can effectively promote New Zealand as a destination celebrated for its stunning natural landscapes, peaceful and laid-back lifestyle, humble and friendly people, and world-class outdoor activities. To maximise reach, we aim to collaborate with mega influencers rather than niche content creators.”
+![user_story](https://github.com/user-attachments/assets/0dd49e08-5c69-4c95-8dfb-7ccf827f631c)
 
 <br>
 
-## Solution
-Use a dashboard that identifies the ideal performing channels based on metrics like subscriber count, views, and engagement rates.
-
-<br>
-
-## Success Criteria (what success looks like to the user)
-•	Users can easily identify the top-performing YouTube channels based on subscriber count, views, and engagement rates.
-
-•	User can assess the potential for successful campaigns with top content creators based on conversion, engagement, and budget.
-
-•	User can make informed decisions on which content creator would be suitable to advance with.
-
-<br>
-
-## Tools
-SQL (MySQL): Data Exploration, Cleaning, Testing
-
-Power BI: Visualisation, Dashboard
-
-Excel: Calculation, Generating Findings
-
-<br>
-
-## Steps
-**Step 1. Get the data** 
-
-•	Download as csv file from Kaggle. [Excel]
-
-https://www.kaggle.com/datasets/nelgiriyewithana/global-youtube-statistics-2023?resource=download
-
-<br>
-
-**Step 2. Data Exploration, Cleaning / Transforming [SQL]**
-  
-  •	Explore data and note findings.
-
-  •	Clean data based on the findings from the data exploration notes. 
-
-  •	Check data quality after cleaning.
-
-<br>
-
-**Step 3. Build a Dashboard [Power BI]**
-
-•	Import the virtual data into Power BI.
-
-•	DAX measures. 
-
-•	Build a dashboard.
-
-<br>
-
-**Step 4. Generating Findings** 
-
-•	Generate findings based on the insights.
-
-•	Identify top 3 creators  
-
-<br>
-
-**Step 5. Calculate YouTube Sponsorship Rate [Excel & SQL]**
-
-•	Use both Excel and SQL to calculate sponsorship rate to avoid discrepancies.
-<br><br>
-**Step 6. Recommendations and Action Plan**
+## Success Criteria
+![success_criteria](https://github.com/user-attachments/assets/85366964-b45d-43d4-aed0-170e5b888857)
 
 <br>
 
 # SQL
 
 ## Data Exploration Notes
-•	Data shape: 847 rows 28 cols
-•	Data Type:
 
-| Column Name                           | Data Type      | Description                                                                 |
-|---------------------------------------|----------------|-----------------------------------------------------------------------------|
-| rank                                  | INT            | Overall rank of the YouTuber                                                |
-| Youtuber                              | TEXT           | Name of the YouTube channel                                                 |
-| subscribers                           | INT            | Number of subscribers                                                        |
-| video_views                           | DOUBLE         | Total number of video views                                                  |
-| Category                              | TEXT           | Category of the channel (e.g., Entertainment, Gaming)                       |
-| Title                                 | TEXT           | Title of the YouTube channel                                                 |
-| uploads                               | INT            | Number of videos uploaded                                                    |
-| Country                               | TEXT           | Country where the channel is based                                           |
-| Abbreviation                          | TEXT           | Country abbreviation (e.g., US, UK)                                          |
-| channel_type                          | TEXT           | Type of channel (e.g., Individual, Company)                                  |
-| video_views_rank                      | INT            | Rank based on total video views                                             |
-| country_rank                          | INT            | Rank within the country                                                      |
-| channel_type_rank                     | INT            | Rank based on channel type                                                   |
-| video_views_for_the_last_30_days      | BIGINT         | Total video views in the last 30 days                                        |
-| lowest_monthly_earnings               | INT            | Estimated lowest monthly earnings                                           |
-| highest_monthly_earnings              | DOUBLE         | Estimated highest monthly earnings                                          |
-| lowest_yearly_earnings                | DOUBLE         | Estimated lowest yearly earnings                                            |
-| highest_yearly_earnings               | DOUBLE         | Estimated highest yearly earnings                                           |
-| subscribers_for_last_30_days          | TEXT           | Number of subscribers gained in the last 30 days                            |
-| created_year                          | INT            | Year the channel was created                                                |
-| created_month                         | TEXT           | Month the channel was created                                               |
-| created_date                          | INT            | Day of the month the channel was created                                    |
-| Gross tertiary education enrolment (%)| DOUBLE         | Percentage of population enrolled in tertiary education                     |
-| Population                            | INT            | Population of the country                                                   |
-| Unemployment rate                     | DOUBLE         | Country's unemployment rate                                                 |
-| Urban_population                      | INT            | Urban population of the country                                             |
-| Latitude                              | DOUBLE         | Latitude coordinates                                                         |
-| Longitude                             | DOUBLE         | Longitude coordinates                                                        |
-
-<br>
-
-•	Some characters in the Youtubers column are corrupted.
+•	Corrupted text values in the column `Youtubers`
     
 >**Solution**:
 Filter out special characters to improve readability:
@@ -150,19 +61,19 @@ Filter out special characters to improve readability:
 
 <br>
 
-•	There are unnecessary columns that aren’t relevant to this project.
+•	Irrelevant columns that do not contribute to our goal of the project
 >**Solution:**
 Drop `abbreviation`, `video views rank`,  `channel_type_rank`,  `video_views_for_the_last_30_days`, `lowest_monthly_earnings`, `highest_monthly_earnings`,  `subscribers_for_last_30_days`, `created_year`,  `created_month`,  `created_date`,  `Gross tertiary education enrollment (%)`, `Population`, `Unemployment rate`,  `Urban_population`, and `Latitude`
 
 <br>
 
-•	Some content creator categories are not relevant to the goal of this project.
+•	Irrelevant categories that do not contribute to our goal of the project
 >**Solution:**
 Drop values `Trailers`, `Nonprofits & Activism`, `Autos & Vehicles`, `nan`, `shows`, `Music`, `film & Animation`, `News & Politics`, and `Movies`.
 
 <br>
 
-•	There are inconsistencies in terms of case and spacing
+•	Inconsistent column names in terms of case and spacing
 >**Solution:**
 Convert to lowercase, remove spaces, and replace with underscores.
 video views → video_views
@@ -170,7 +81,7 @@ Country → country
 
 <br>
 
-•	The data will require a rough estimate of the engagement rate based on the number of views per subscriber.
+•	Missing important information such as engagement rate
 >**Solution:**
 Add a new col `engagement_rate` using the following formula:
 engagement_rate = (total_views / subscribers) * 100
@@ -185,7 +96,7 @@ Option 2: re-categorise these channels accordingly and add a new column to indic
 
 <br>
 
-## Data Cleaning
+## (SQL) Data Cleaning
 We cleaned the data in accordance with the data exploration notes and saved as a virtual table:
 
 ```sql
@@ -222,8 +133,8 @@ Rows and columns after cleaning: 541 rows 11 rols
 
 <br>
 
-## Data Quality Check
-Before pushing the cleaned data into Power BI, we want to ensure that it meets the following criteria:
+## (SQL) Data Quality Check
+Before importing the cleaned data into Power BI, we want to ensure that our cleaned data meets the following criteria:
 
 <br>
 
@@ -267,10 +178,11 @@ FROM `virtual_table`;
 
 # Power BI
 
-## Build Dashboard
-We have pushed the data into Power BI, and calculated the DAX measures used to create the dashboard, including converting large numbers (e.g., billions) into a readable format, such as 22.88M.
+## (POWER BI) Build Dashboard
 
-DAX Measure: Total Subscribers
+DAX measures to make large numbers easier to read and interpret large numbers
+
+DAX Measure: **Total Subscribers**
 ```dax
 Total Subscribers (M) = 
 VAR million = 1000000
@@ -280,7 +192,7 @@ VAR totalSubscribers = DIVIDE(sumOfSubscribers, million)
 RETURN totalSubscribers
 ```
 
-DAX Measure: Total Views
+DAX Measure: **Total Views**
 ```dax
 Total Views (B) = 
 VAR billion = 1000000000
@@ -290,7 +202,7 @@ VAR totalViews = DIVIDE(sumOfTotalViews, billion)
 RETURN totalViews
 ```
 
-DAX Measure: Total Videos
+DAX Measure: **Total Videos**
 ```dax
 Total Videos = 
 VAR totalVideos = SUM('influencers virtual_table'[uploads])
@@ -298,7 +210,7 @@ VAR totalVideos = SUM('influencers virtual_table'[uploads])
 RETURN totalVideos
 ```
 
-DAX Measure: Average Views Per Video
+DAX Measure: **Average Views Per Video**
 ```dax
 Avg Views per Video (M) = 
 VAR sumOfTotalViews = SUM('influencers virtual_table'[total_views])
@@ -309,7 +221,7 @@ VAR finalAvgViewsPerVideo = DIVIDE(avgViewsPerVideo, 1000000, BLANK())
 RETURN finalAvgViewsPerVideo
 ```
 
-DAX Measure: View Per Subscriber
+DAX Measure: **View Per Subscriber**
 ```dax
 Views per Subscriber = 
 VAR sumOfTotalViews = SUM('influencers virtual_table'[total_views])
@@ -319,7 +231,7 @@ VAR viewsPerSubscriber = DIVIDE(sumOfTotalViews, sumOfTotalSubscribers, BLANK())
 RETURN viewsPerSubscriber
 ```
 
-DAX Measure: Total Videos
+DAX Measure: **Total Videos**
 ```dax
 Subscriber Engagement Rate = 
 VAR sumOfTotalSubscribers = SUM('influencers virtual_table'[subscribers])
@@ -331,41 +243,31 @@ RETURN subscriberEngRate * 100
 
 <br>
 
-## Final look of the dashboard 
+## (Power BI) Dashboard 
 
+**1/3. Overview**
 ![dashboard_1](https://github.com/user-attachments/assets/1f41a02e-2adb-4c56-b232-a7f776e1e458)
-
-![dashboard_2](https://github.com/user-attachments/assets/c480fd41-b788-4f91-90ae-1fc228547c94)
-
-![dashboard_3](https://github.com/user-attachments/assets/cc55483c-54b3-432d-800b-d852c2acf710)
+- United States has the most subscribers worldwide.
 
 <br>
 
-# Analysis
+**2/3. Finding Relationships between engagement rate, subscriber count and view count**
+![dashboard_2](https://github.com/user-attachments/assets/c480fd41-b788-4f91-90ae-1fc228547c94)
+- Channels focused on children’s content, entertainment, and celebrities tend to have the highest views and engagement rates, but this data is considered noise.
 
-## Findings
+<br>
 
-- Our analysis shows the United States has the most subscribers worldwide.
-- Kids' channels, entertainment-related channels, and celebrity channels have the highest views and engagement rates - noisy data - making it difficult for an accurate analysis.
+3/3. Analysis after removing noise 
+![dashboard_3](https://github.com/user-attachments/assets/cc55483c-54b3-432d-800b-d852c2acf710)
+- After removing noise (kids channels etc), we have found the top 10 creators based on world rank, subscriber, count, engagement, and total views.
 
-| Channel Name        | Comment                                                                 |
-|---------------------|-------------------------------------------------------------------------|
-| Mr Beast            | Exceeds the campaign budget.                                            |
-| Dude Perfect        | Potential replacement for Mr. Beast.                                    |
-| Markiplier          | Focuses primarily on film-related content.                              |
-| SSSniperWolf        | Known for reaction videos, which cater to a somewhat niche audience.    |
-| Lucas and Marcus    | Only certain videos achieve significant viewership.                     |
-| Zhong               | Content is vague and lacks clear focus.                                 |
-| Alan Chikin Chow    | Content is not highly relevant to our project aim.                      |
-| Smosh               | Each video typically garners fewer than 1M views.                       |
-| Mark Rober          | Offers great reach but focuses on a niche audience with science-based content. |
-| Preston             | Known for experimentation-style content.                                |
+<br>
 
+# Excel & SQL
 
-## Calculating YouTube Sponsorship Rate
+## (Excel & SQL) Calculating YouTube Sponsorship Rate 
 
-CPM (Cost Per Mille) based formula:
-
+> CPM (Cost Per Mille) based formula:**
 *Sponsorship Rate = (Average Views Per Video / 1000) × CPM*
 
 <br>
@@ -461,18 +363,31 @@ ORDER BY conversion_rate DESC;
 
 ![image](https://github.com/user-attachments/assets/710cc4ed-163b-41c1-a408-1ef308e7d3d0)
 
-
 Both results (Excel and SQL) are identical.
-
-- **Beast (166M)** would be the best option to maximise reach and ROI due to his large subscriber base, but the campaign cost is extremely high.
-- **Dude Perfect (59.50M)** could deliver a similar outcome to Mr. Beast with a slightly lower budget. Despite having a lower subscriber base, their audience is more engaged with the content than Mr Beast’s.
-- **Preston (24M)** has the least conversion and engagement, but the channel is still widely known and could be a viable option within a budget-conscious strategy.
 
 <br>
 
-## Recommendation and Action Plan
-If the goal is solely to maximise reach and conversions, Mr Beast would be the best option to pursue with. While other channels, like Dude Perfect, have similar or even higher engagement rates than Mr. Beast, his brand awareness makes him the most reliable choice for ROI. For cost-effectiveness, Preston would be the ideal option, although his impact may be less certain compared to Mr Beast.
+# Analysis
 
-We will follow up with our client (Head of Marketing) to understand their expectations for this collaboration. Once we predict that we’re on track to hit the KPIs, we will move forward with a potential partnership with one of the creators.
+## Findings
+![drop](https://github.com/user-attachments/assets/38e7ff97-562c-402d-8180-1996bb718b08)
 
-After reaching out and negotiating contracts, we will track each creator's performance against the KPIs. We will review how the campaigns have performed, gather insights, and optimise based on feedback from converted customers and each channel's audience.
+![top3](https://github.com/user-attachments/assets/1dbfa659-b6be-4451-8877-75f1a9f602ba)
+
+Top Creators with Relevant Content Style, High Subscriber Count, and Engagement Rate, and World Rank are **Mr Beast**, **Dude Perfect**, and **Preston**.  
+
+<br>
+
+- To **maximise reach and conversions: Mr Beast** would be the best option to pursue with. While other channels, like Dude Perfect, have similar or even higher engagement rates than Mr. Beast, his brand awareness makes him the most reliable choice for ROI.
+
+- **For cost-effectiveness, Preston** would be the ideal option, although his impact may be less certain compared to Mr Beast.
+
+<br>
+
+## Action Plan
+![action plan](https://github.com/user-attachments/assets/d99229b3-ec53-40c5-b8cc-d8e2d6acbcf0)
+
+
+
+
+
