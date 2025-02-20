@@ -1,30 +1,12 @@
 
-
-* [Objective](#objective)
-	* [About Dataset](#about-dataset)
-	* [Workflow](#workflow)
-	* [User Story](#user-story)
-	* [Success Criteria](#success-criteria)
-* [SQL](#sql)
-	* [Data Exploration Notes](#data-exploration-notes)                                                                              
-	* [Data Cleaning](#data-cleaning)                                                                                                
-	* [Data Quality Check](#data-quality-check)
-* [Power BI](#power-bi)
-	* [(Power BI) Build Dashboard](#(power-bi)-build-a-dashboard)
-	* [(Power BI) Dashboard](#dashboard)
-* [Excel & SQL](#excel-&-sql)
-	* [(Excel & SQL) Calculating YouTube Sponsorship Rate](#(excel-&-sql)-calculating-youtube-sponsorship-rate)
-* [Analysis](#analysis)
-  	* [Findings](#findings)
-  	* [Action Plan](#action-plan)
-  	  
+# end-to-end-portfolio-identifying_top_youtube_creators
 
 <br>
 
 # Objective
-Our aim is to enhancing NZ’s tourism economy, to increase the opportunity to benefit local businesses, boost support for sports teams, attract potential investors, influx of foreign money, and encourage more influential figures to visit.Identify top-performing YouTube content creators of 2023 and collaborate with them to keep New Zealand on the global travel radar.
+Our aim is to enhancing NZ’s tourism economy, to increase the opportunity to benefit local businesses, boost support for sports teams, attract potential investors, influx of foreign money, and encourage more influential figures to visit. 
+Identify top-performing YouTube content creators of 2023 and collaborate with them to keep New Zealand on the global travel radar.
 
-<br>
 
 ## About Dataset
 | Field Name                             | Data Type  | Description |
