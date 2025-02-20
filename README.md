@@ -22,27 +22,64 @@
 <br>
 
 # Objective
-![objective](https://github.com/user-attachments/assets/aeb4daa8-88f2-4f22-9fd6-2a1717a9a5e9)
+Our aim is to enhancing NZ’s tourism economy, to increase the opportunity to benefit local businesses, boost support for sports teams, attract potential investors, influx of foreign money, and encourage more influential figures to visit.Identify top-performing YouTube content creators of 2023 and collaborate with them to keep New Zealand on the global travel radar.
 
 <br>
 
 ## About Dataset
-![about dataset](https://github.com/user-attachments/assets/d4a97c57-a1dd-4e74-a98b-bddc011a69cd)
+| Field Name                             | Data Type  | Description |
+|----------------------------------------|-----------|-------------|
+| rank                                   | INT       | Overall rank of the YouTuber |
+| Youtuber                               | TEXT      | Name of the YouTube channel |
+| subscribers                            | INT       | Number of subscribers |
+| video_views                            | DOUBLE    | Total number of video views |
+| category                               | TEXT      | Category of the channel (e.g., Entertainment, Gaming) |
+| Title                                  | TEXT      | Title of the YouTube channel |
+| uploads                                | INT       | Number of videos uploaded |
+| Country                                | TEXT      | Country where the channel is based |
+| Abbreviation                           | TEXT      | Country abbreviation (e.g., US, UK) |
+| channel_type                           | TEXT      | Type of channel (e.g., Individual, Company) |
+| video_views_rank                       | INT       | Rank based on total video views |
+| country_rank                           | INT       | Rank within the country |
+| channel_type_rank                      | INT       | Rank based on channel type |
+| video_views_for_the_last_30_days       | INT       | Total video views in the last 30 days |
+| lowest_monthly_earnings                 | INT       | Estimated lowest monthly earnings |
+| highest_monthly_earnings                | DOUBLE    | Estimated highest monthly earnings |
+| lowest_yearly_earnings                  | DOUBLE    | Estimated lowest yearly earnings |
+| highest_yearly_earnings                 | DOUBLE    | Estimated highest yearly earnings |
+| subscribers_for_last_30_days           | TEXT      | Number of subscribers gained in the last 30 days |
+| created_year                           | INT       | Year the channel was created |
+| created_month                          | TEXT      | Month the channel was created |
+| created_date                           | INT       | Day of the month the channel was created |
+| Gross tertiary education enrollment (%) | DOUBLE    | Percentage of population enrolled in tertiary education |
+| Population                             | INT       | Population of the country |
+| Unemployment rate                      | DOUBLE    | Country's unemployment rate |
+| Urban_population                       | INT       | Urban population of the country |
+| Latitude                               | DOUBLE    | Latitude coordinates |
+| Longitude                              | DOUBLE    | Longitude coordinates |
+
 
 <br>
 
 ## Workflow
-![workflow](https://github.com/user-attachments/assets/335c026b-585b-4d51-80dd-64d0d5ae357b)
+1. Get CSV file from Kaggle
+2. SQL - Data Exploration, Cleaning / Transforming / Quality Check
+3. Power BI - Build dashboard
+4. Excel - Data quality check / Calculating sponsorship fees 
 
 <br>
 
 ## User Story
-![user_story](https://github.com/user-attachments/assets/0dd49e08-5c69-4c95-8dfb-7ccf827f631c)
+The Head of Marketing wants to explore different creator options and select the best one to promote New Zealand as a destination known for its stunning natural landscapes, world-class outdoor activities, and humble & friendly culture.To maximise reach, they want to collaborate with mega influencers rather than niche content creators.
 
 <br>
 
 ## Success Criteria
-![success_criteria](https://github.com/user-attachments/assets/85366964-b45d-43d4-aed0-170e5b888857)
+- Create a dashboard that identifies top-performing channels based on metrics such as subscriber count, views, and engagement rates.
+- Prioritise mega influencers over niche content creators who produce suitable content for promoting the country - those who actively participate in activities and engage with people.
+- User can easily identify the top performing YouTube channels based on subscriber count, views, and engagement rates.
+- User can assess the potential for successful campaigns with top content creators based on reach, engagement, and budget.
+- User can make informed decisions on which content creator would be suitable to advance with.
 
 <br>
 
@@ -370,22 +407,18 @@ Both results (Excel and SQL) are identical.
 # Analysis
 
 ## Findings
-![drop](https://github.com/user-attachments/assets/38e7ff97-562c-402d-8180-1996bb718b08)
-
-![top3](https://github.com/user-attachments/assets/1dbfa659-b6be-4451-8877-75f1a9f602ba)
 
 Top Creators with Relevant Content Style, High Subscriber Count, and Engagement Rate, and World Rank are **Mr Beast**, **Dude Perfect**, and **Preston**.  
 
-<br>
-
 - To **maximise reach and conversions: Mr Beast** would be the best option to pursue with. While other channels, like Dude Perfect, have similar or even higher engagement rates than Mr. Beast, his brand awareness makes him the most reliable choice for ROI.
-
 - **For cost-effectiveness, Preston** would be the ideal option, although his impact may be less certain compared to Mr Beast.
 
 <br>
 
 ## Action Plan
-![action plan](https://github.com/user-attachments/assets/d99229b3-ec53-40c5-b8cc-d8e2d6acbcf0)
+
+- Follow up with the client (Head of Marketing) to understand their expectations for this collaboration. Once we predict that we’re on track to hit the KPIs, we will move forward with a potential partnership with one of the creators.
+- After reaching out and negotiating contracts, we will track each creator's performance against the KPIs. We will review how the campaigns have performed, gather insights, and optimise based on feedback from converted customers and each channel's audience.
 
 
 
